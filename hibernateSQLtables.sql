@@ -59,9 +59,9 @@ create table enrollment
 	primary key(CourseCode, StudentID),
 	foreign key(CourseCode, SectionNo) references offering(CourseCode, SectionNo)
 );
-LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Person.xml' INTO TABLE person ROWS IDENTIFIED BY '<Person>';
-LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Instructor.xml' INTO TABLE instructor ROWS IDENTIFIED BY '<Instructor>';
-LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Student.xml' INTO TABLE student ROWS IDENTIFIED BY '<Student>';
-LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Course.xml' INTO TABLE course ROWS IDENTIFIED BY '<Course>';
-LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Offering.xml' INTO TABLE offering ROWS IDENTIFIED BY '<Offering>';
-LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Enrollment.xml' INTO TABLE enrollment ROWS IDENTIFIED BY '<Enrollment>';
+LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Person.xml' INTO TABLE person ROWS IDENTIFIED BY '<person>';
+LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Instructor.xml' INTO TABLE instructor ROWS IDENTIFIED BY '<instructor>';
+LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Student.xml' INTO TABLE student ROWS IDENTIFIED BY '<student>';
+LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Course.xml' INTO TABLE course ROWS IDENTIFIED BY '<course>';
+LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Offering.xml' INTO TABLE offering ROWS IDENTIFIED BY '<offering>';
+LOAD XML LOCAL INFILE 'C:/DataSets/UniversityXML/Enrollment.xml' INTO TABLE enrollment ROWS IDENTIFIED BY '<enrollment>';
