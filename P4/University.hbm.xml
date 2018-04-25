@@ -3,7 +3,7 @@
 "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="MyPackage">
 
-    <class name="Person" table="person" catalog="coms363hn" optimistic-lock="version">
+    <class name="Person" table="person" catalog="db363demoss" optimistic-lock="version">
         <id name="id" column="ID">
             <generator class="assigned"/>
         </id>
@@ -26,7 +26,7 @@
 		</joined-subclass>
     </class>
  
-	<class name="Course" table="course" catalog="coms363hn" optimistic-lock="version">
+	<class name="Course" table="course" catalog="db363demoss" optimistic-lock="version">
 		<composite-id>
 		<key-property name="coursecode" column="CourseCode"/>
         <key-property name="prereq" column="PreReq"/>
@@ -34,7 +34,7 @@
 		<property name="coursename" column="CourseName"/>
     </class>
 
-	<class name="Offering" table="offering" catalog="coms363hn" optimistic-lock="version">
+	<class name="Offering" table="offering" catalog="db363demoss" optimistic-lock="version">
 		<composite-id>
 		<key-property name="coursecode" column="CourseCode"/> 
 		<key-property name="sectionno" column="SectionNo"/>
@@ -42,7 +42,7 @@
 		<many-to-one name="instructorid" class="Instructor" fetch="select" column="InstructorID"/>
     </class>
 
-	<class name="Enrollment" table="enrollment" catalog="coms363hn" optimistic-lock="version">
+	<class name="Enrollment" table="enrollment" catalog="db363demoss" optimistic-lock="version">
 		<composite-id>
 		<key-property name="coursecode" column="CourseCode"/>
 		<key-property name="sectionno" column="SectionNo"/>
